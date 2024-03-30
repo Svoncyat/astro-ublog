@@ -18,11 +18,10 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [
-      remarkToc,
       [
-        remarkCollapse,
+        remarkToc,
         {
-          test: "Table of contents",
+          heading: "Tabla de Contenidos",
         },
       ],
     ],
