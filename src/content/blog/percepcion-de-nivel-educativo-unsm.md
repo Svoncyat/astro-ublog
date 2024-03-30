@@ -13,15 +13,15 @@ tags:
 description: Analizamos el nivel de calidad educativo en la UNSM desde mi perspectiva estudiantil
 ---
 
-[=>📄 Percepción-JoyCorrea.pdf](https://drive.google.com/file/d/1DWDxlWwWovAWPTvTEf6BSBSdpmY5M219/view?usp=drive_link)
+[`=>📄 Percepción-JoyCorrea.pdf`](https://drive.google.com/file/d/1DWDxlWwWovAWPTvTEf6BSBSdpmY5M219/view?usp=drive_link)
 
-`Asignatura:` Teoría General de Sistemas
+**Asignatura:** Teoría General de Sistemas
 
-`Estudiante:` Joy Steven Correa Torres
+**Estudiante:** Joy Steven Correa Torres
 
-`Asesor:` Ing. Dr. Alberto Alva Arévalo
+**Asesor:** Ing. Dr. Alberto Alva Arévalo
 
-`Ciclo:` IV
+**Ciclo:** IV
 
 ## Tabla de Contenidos
 
@@ -110,4 +110,10 @@ Basado en los hallazgos y reflexiones expuestas en este documento, se sugieren l
 
 # Anexos
 
+![mapa-uno](@assets/images/mapa_percepcion.png)
+
 # Referencias
+
+- [Universidad Nacional de San Martín | Web Oficial](https://unsm.edu.pe/oficina/admision/)
+- [Perú | Ranking Web de Universidades](https://www.webometrics.info/en/Latin_America/Peru)
+- [Research Organization Registry (ROR)](https://ror.org/02h7fsz12)
