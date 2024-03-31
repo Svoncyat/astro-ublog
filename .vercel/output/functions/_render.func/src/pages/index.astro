@@ -1,0 +1,145 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+import Hr from "@components/Hr.astro";
+import Card from "@components/Card";
+import Socials from "@components/Socials.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import { SOCIALS } from "@config";
+
+const posts = await getCollection("blog");
+
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+
+const socialCount = SOCIALS.filter(social => social.active).length;
+---
+
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="hero">
+      <h1>Blog Universitario</h1>
+      <h2>Joy Steven Correa Torres</h2>
+      <p>
+        Espacio web creado para la recopilación de proyectos universitarios.
+        Este blog/portafolio indexa mi trayectoria academica atravesando
+        diversas áreas y en el camino reflejando mi crecimiento personal.
+      </p>
+
+      {
+        // only display if at least one social link is enabled
+        socialCount > 0 && (
+          <div class="social-wrapper">
+            <div class="social-links">
+              <i>Plantilla recuperada de:</i>
+            </div>
+            <Socials />
+          </div>
+        )
+      }
+    </section>
+
+    <Hr />
+
+    {
+      featuredPosts.length > 0 && (
+        <>
+          <section id="featured">
+            <h2>Tareas Recientes</h2>
+            <ul>
+              {featuredPosts.map(({ data, slug }) => (
+                <Card
+                  href={`/posts/${slug}/`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              ))}
+            </ul>
+          </section>
+          {recentPosts.length > 0 && <Hr />}
+        </>
+      )
+    }
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts">
+          <h2>Otros</h2>
+          <ul>
+            {recentPosts.map(
+              ({ data, slug }, index) =>
+                index < 4 && (
+                  <Card
+                    href={`/posts/${slug}/`}
+                    frontmatter={data}
+                    secHeading={false}
+                  />
+                )
+            )}
+          </ul>
+        </section>
+      )
+    }
+
+    <Hr />
+
+    <div class="all-posts-btn-wrapper">
+      <LinkButton href="/posts/">
+        Todas las publicaciones
+        <svg xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+          ></path>
+        </svg>
+      </LinkButton>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Hero Section ===== */
+  #hero {
+    @apply pb-6 pt-6;
+  }
+  #hero h1 {
+    @apply my-3 inline-block text-3xl font-bold sm:my-4 sm:text-5xl;
+  }
+  #hero h2 {
+    @apply font-bold;
+  }
+  #hero .rss-link {
+    @apply mb-6;
+  }
+  #hero .rss-icon {
+    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+  }
+  #hero p {
+    @apply my-2;
+  }
+  .social-wrapper {
+    @apply mt-3 mb-3 flex flex-col sm:flex-row sm:items-center;
+  }
+  .social-links {
+    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  }
+
+  /* ===== Featured & Recent Posts Sections ===== */
+  #featured,
+  #recent-posts {
+    @apply pb-6 pt-6;
+  }
+  #featured h2,
+  #recent-posts h2 {
+    @apply text-2xl font-semibold tracking-wide;
+  }
+  .all-posts-btn-wrapper {
+    @apply my-8 text-center;
+  }
+</style>
