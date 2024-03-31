@@ -77,8 +77,8 @@
   tfoot td:first-child {
     padding-left: 0.5714286em;
   }
-  .prose h2#table-of-contents {
-    @apply mb-2;
+  .prose h2#tabla-de-contenidos {
+    @apply m-0;
   }
   .prose details {
     @apply inline-block cursor-pointer select-none text-skin-base;
@@ -86,7 +86,7 @@
   .prose summary {
     @apply focus-outline;
   }
-  .prose h2#table-of-contents + p {
+  .prose h2#tabla-de-contenidos + p {
     @apply hidden;
   }
 
