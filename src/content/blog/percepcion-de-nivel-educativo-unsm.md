@@ -13,7 +13,7 @@ tags:
 description: Analizamos el nivel de calidad educativo en la UNSM desde mi perspectiva estudiantil
 ---
 
-[`=> 📄 Percepción-JoyCorrea.pdf`](https://drive.google.com/file/d/1DWDxlWwWovAWPTvTEf6BSBSdpmY5M219/view?usp=drive_link)
+[`=> 📄 Percepción-JoyCorrea.pdf`](https://drive.google.com/file/d/15tTP4Tvk2knedCUitzF2U59whtGPoWP7/view?usp=sharing)
 
 **Asignatura:** Teoría General de Sistemas
 
