@@ -9,6 +9,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
+import Disqus from "@components/Disqus.astro";
 
 const posts = await getCollection("blog");
 
@@ -86,18 +87,22 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
+    <div class="my-8 text-center">
+      <div class="all-posts-btn-wrapper">
+        <LinkButton href="/posts/">
+          Todas las publicaciones
+          <svg xmlns="http://www.w3.org/2000/svg"
+            ><path
+              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+            ></path>
+          </svg>
+        </LinkButton>
+      </div>
+    </div>
+
     <Hr />
 
-    <div class="all-posts-btn-wrapper">
-      <LinkButton href="/posts/">
-        Todas las publicaciones
-        <svg xmlns="http://www.w3.org/2000/svg"
-          ><path
-            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-          ></path>
-        </svg>
-      </LinkButton>
-    </div>
+    <Disqus />
   </main>
 
   <Footer />
@@ -124,7 +129,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply my-2;
   }
   .social-wrapper {
-    @apply mt-3 mb-3 flex flex-col sm:flex-row sm:items-center;
+    @apply mb-3 mt-3 flex flex-col sm:flex-row sm:items-center;
   }
   .social-links {
     @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
@@ -140,6 +145,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply text-2xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {
-    @apply my-8 text-center;
+    @apply inline-block border border-green-600 p-2;
   }
 </style>

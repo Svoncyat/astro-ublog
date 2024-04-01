@@ -46,6 +46,25 @@ function reflectPreference() {
   }
 }
 
+function reloadDisqusSection() {
+  var disqusThread = document.getElementById("disqus_thread");
+  var disqusEmbedScript = document.getElementById("disqus-embed-script");
+
+  // vaciamos el disqus para poder recargarlo
+  disqusThread.innerHTML = "";
+
+  // se agrega nuevamente el script de disqus
+  var newDisqusEmbedScript = document.createElement("script");
+  newDisqusEmbedScript.id = "disqus-embed-script";
+  newDisqusEmbedScript.setAttribute(
+    "data-timestamp",
+    new Date().toDateString()
+  );
+  newDisqusEmbedScript.src = "https://disqus-blog-jsct.disqus.com/embed.js";
+
+  disqusThread.appendChild(newDisqusEmbedScript);
+}
+
 // set early so no page flashes / CSS is made aware
 reflectPreference();
 
@@ -57,6 +76,7 @@ window.onload = () => {
     // now this script can find and listen for clicks on the control
     document.querySelector("#theme-btn")?.addEventListener("click", () => {
       themeValue = themeValue === "light" ? "dark" : "light";
+      reloadDisqusSection();
       setPreference();
     });
   }
