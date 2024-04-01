@@ -1,14 +1,22 @@
 <section class="my-4">
-  <div id="disqus_thread" transition:persist="always"></div>
+  <div id="disqus_thread"></div>
   <script>
-    (function () {
-      // DON'T EDIT BELOW THIS LINE
-      var d = document,
-        s = d.createElement("script");
+    function init() {
+      // Inicializa el div de Disqus
+      var disqusThread = document.getElementById("disqus_thread");
+      disqusThread.innerHTML = ""; // Vacía el contenido
+      // Vuelve a cargar Disqus
+      var s = document.createElement("script");
       s.src = "https://disqus-blog-jsct.disqus.com/embed.js";
       s.setAttribute("data-timestamp", new Date().toDateString());
-      (d.head || d.body).appendChild(s);
-    })();
+      disqusThread.appendChild(s);
+    }
+
+    // Inicializa en la primera carga
+    init();
+
+    // Re-inicializa después de cambiar de página
+    document.addEventListener("astro:after-swap", init);
   </script>
   <noscript
     >Please enable JavaScript to view the <a
