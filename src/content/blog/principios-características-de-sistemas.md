@@ -1,7 +1,7 @@
 ---
 author: Joy Correa
-pubDatetime: 2024-05-06T25:22:00Z
-modDatetime: 2024-05-06T25:22:00Z
+pubDatetime: 2024-05-06T25:23:00Z
+modDatetime: 2024-05-06T25:23:00Z
 title: "Principios y Características de Todo Sistema"
 slug: principios-caracteristicas-de-sistemas
 featured: true

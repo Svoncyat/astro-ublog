@@ -4,7 +4,7 @@ pubDatetime: 2024-03-29T25:12:00Z
 modDatetime: 2024-03-29T25:12:00Z
 title: Percepción de la realidad en el nivel educativo de la Universidad Nacional de San Martín
 slug: percepcion-de-nivel-educativo-unsm
-featured: true
+featured: false
 draft: false
 tags:
   - tgs
