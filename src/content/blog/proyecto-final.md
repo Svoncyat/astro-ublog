@@ -13,7 +13,7 @@ tags:
 description: Exploramos el método cartesiano dentro del ámbito de la Teoría General de Sistemas
 ---
 
-[`=> 📄 Proyecto Final - Grupo III.pdf`](https://drive.google.com/file/d/1U24687SdtgBNZN1RxO_r9bANgP1qT7Y0/view?usp=sharing)
+[`=> 📄 Proyecto Final - Grupo III.pdf`](https://drive.google.com/file/d/1Jx9BHHskRylQ7xLK-ETdYgD6c4eBv5Fs/view?usp=sharing)
 
 **Asignatura:** Teoría General de Sistemas
 
