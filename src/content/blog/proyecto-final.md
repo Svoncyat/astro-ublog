@@ -176,4 +176,4 @@ Consideramos lo siguiente:
 
 - [San Martín: aguas residuales contaminan ríos Shilcayo y Cumbaza | Spda, W.](https://www.actualidadambiental.pe/san-martin-aguas-residuales-contaminan-rios-shilcayo-y-cumbaza/)
 
--[Riesgos Geológicos en la Región San Martín. | Nuñez, S., & Luque, G.]()
+- [Riesgos Geológicos en la Región San Martín. | Nuñez, S., & Luque, G.]()
