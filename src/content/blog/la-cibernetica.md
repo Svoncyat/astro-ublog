@@ -1,7 +1,7 @@
 ---
 author: Joy Correa
-pubDatetime: 2024-05-06T25:23:00Z
-modDatetime: 2024-05-06T25:23:00Z
+pubDatetime: 2024-06-06T25:23:00Z
+modDatetime: 2024-06-06T25:23:00Z
 title: "La Cibernética"
 slug: la-cibernetica
 featured: true

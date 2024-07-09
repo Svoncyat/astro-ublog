@@ -1,7 +1,7 @@
 ---
 author: Joy Correa
-pubDatetime: 2024-05-06T25:23:00Z
-modDatetime: 2024-05-06T25:23:00Z
+pubDatetime: 2024-07-06T25:23:00Z
+modDatetime: 2024-07-06T25:23:00Z
 title: "El Metodo Cartesiano"
 slug: metodo-cartesiano
 featured: true
@@ -13,7 +13,7 @@ tags:
 description: Exploramos el método cartesiano dentro del ámbito de la Teoría General de Sistemas
 ---
 
-[`=> 📄 Metodo Cartesiano - Joy Correa.pdf`](https://drive.google.com/file/d/1vuqewrbe69oE073xC0eWaifIAhHUhVjY/view?usp=sharing)
+[`=> 📄 Metodo Cartesiano - Joy Correa.pdf`](https://drive.google.com/file/d/1U24687SdtgBNZN1RxO_r9bANgP1qT7Y0/view?usp=sharing)
 
 **Asignatura:** Teoría General de Sistemas
 
